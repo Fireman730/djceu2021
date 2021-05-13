@@ -3,7 +3,7 @@ Putting a shell (or a desktop) in your Django app
 
 * * *
 
-Maari Tamm, Florian Haas | [@xahteiwi](https://twitter.com/xahteiwi)
+Maari Tamm, Florian Haas | [@tammmri](https://twitter.com/tammmri), [@xahteiwi](https://twitter.com/xahteiwi)
 
 DjangoCon Europe 2021 | 2021-06-04
 
