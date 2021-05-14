@@ -1,5 +1,7 @@
-So what are we talking about here? Let us show you. What you see on
-your screen right now is a platform that we run, City Cloud
+TODO: Screen cast of demo course in Open edX
+
+So what are we talking about here? Let us just show you. What you see
+on your screen right now is a platform that we run, City Cloud
 Academy. It is a learning management system that's based on Open edX,
 which _itself_ is a big set of Django applications that could be a
 DjangoCon talk -- or tutorial! on its own. And in fact, probably the
@@ -24,6 +26,8 @@ comes in handy for us, but that is of secondary importance to what
 we're about to show you, as you'll see in a moment. So this totally
 applies to you even if you're _not_ working in a cloud company.
 
+TODO: Screen cast of opening a lab environment with an SSH terminal
+
 So. What's happening here is that we open up a page on the learning
 management system -- the "LMS" -- and it contains a little magic
 window. And that window is your entry point to your own little
@@ -32,6 +36,8 @@ API call to the cloud platform on your behalf, spins up an arbitrarily
 complex stack -- could be one virtual machine, could be 5, could be
 10, could be 3 that each run 50 containers, whatever -- and then
 presents you with a terminal, right there in your browser.
+
+TODO: Screen cast of opening a lab environment with an RDP desktop
 
 And -- as you can see in the next lab here --, that terminal needn't
 be a boring old text terminal, but it can be a full-blown desktop as

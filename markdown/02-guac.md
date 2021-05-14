@@ -19,6 +19,8 @@ All right, now. The first thing we'll look at is the Guacamole
 so it's very fast and efficient, and it connects to upstream SSH or RDP
 (or VNC) services using **protocol plugins**.
 
+TODO: Graphics for guacd-to-lab connection
+
 So, to the services running on our labs, the guacd *server* acts as an
 SSH or RDP *client*. (Yes, the terminology easily gets confusing, so
 stay with us here.)
@@ -32,6 +34,8 @@ stream that's always the Guacamole protocol.
 OK but your browser of course doesn't _speak_ the Guacamole
 protocol. It speaks HTTP and Websockets. So we need another
 translation engine.
+
+TODO: Graphics for guacd↔Guacamole client↔browser connection
 
 And here's where the naming gets really confusing, because in
 Guacamole's documentation this thing is called the Guacamole _client,_
@@ -53,8 +57,12 @@ of the time, what people do is
 * deploy guacd
 * deploy the guacamole servlet application
 
+TODO: Guacamole remote desktop manager screenshot
+
 (all of which they can do either natively, or via Docker containers),
 and what they get is a nice remote-desktop manager.
+
+TODO: Screenshot of Guacamole documentation to create own application
 
 Or, if you want to incorporate Guacamole into your own
 application, the developers give you a nice how-to for [how to build
@@ -74,3 +82,7 @@ key files. When you tear the lab down you'll throw them both away, but
 while the lab is alive you want to grab that data from your database
 and create a Guacamole connection.
 
+Now, you *could* do some really bad data mangling and then copy all
+that data from your Django model into a database that the Java
+application could read from, but that gets ugly very quickly. So you
+really don't want to do that.
