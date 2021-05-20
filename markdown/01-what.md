@@ -1,5 +1,6 @@
-TODO: Screen cast of demo course in Open edX
+<!-- .slide: data-background-image="images/cca-start-page.png" data-background-size="contain" -->
 
+<!-- Note -->
 So what are we talking about here? Let us just show you. What you see
 on your screen right now is a platform that we run, City Cloud
 Academy. It is a learning management system that's based on Open edX,
@@ -26,34 +27,44 @@ comes in handy for us, but that is of secondary importance to what
 we're about to show you, as you'll see in a moment. So this totally
 applies to you even if you're _not_ working in a cloud company.
 
-TODO: Screen cast of opening a lab environment with an SSH terminal
 
+<!-- .slide: data-background-video="videos/screencast-terminal.mp4" data-background-color="black" data-background-size="contain" -->
+
+<!-- Note -->
 So. What's happening here is that we open up a page on the learning
 management system -- the "LMS" -- and it contains a little magic
 window, an interactive terminal. And that window is your entry point
-to your own little lab. Without you knowing it, once you hit this
-page, the LMS makes an API call to the cloud platform on your behalf,
-spins up an arbitrarily complex stack -- in this case it’s just one
-Ubuntu machine, but it could be 5, could be 10, could be 3 that each
-run 50 containers, whatever -- and then presents you with a terminal,
-right there in your browser. And this terminal is of course fully
-interactive and you can use it just like your favourite terminal
-emulator.
+to your own little lab.
 
 So in this case here, what the learner is doing is they drop into the
 terminal, they look around a bit, and then they decide that they’re
 about to develop and compile something, so they start by installing
 the `build-essential` metapackage.
 
-TODO: Screen cast of opening a lab environment with an RDP desktop
+Without a learner knowing it, once they first hit this page, the LMS
+makes an API call to the cloud platform on their behalf, spins up an
+arbitrarily complex stack -- in this case it’s just one Ubuntu
+machine, but it could be 5, could be 10, could be 3 that each run 50
+containers, whatever -- and then presents you with a terminal, right
+there in your browser. And this terminal is of course fully
+interactive and you can use it just like your favourite terminal
+emulator.
 
-And -- as you can see in the next lab here --, that terminal needn't
-be a boring old text terminal, but it can be a full-blown desktop as
-well. In this case it’s an XFCE 4 desktop on Xubuntu. And what we’ll
-do here just to demonstrate that yes, this thing **is** a fully
-interactive platform is open LibreOffice Writer and create some text
-in it.
 
+<!-- .slide: data-background-iframe="https://www.youtube-nocookie.com/embed/B1ic5o9geqw?start=222" data-background-size="contain" -->
+
+<!-- Note -->
+And -- as you can see in the next lab that we’re progressing to here
+--, that terminal needn't be a boring old text terminal, but it can be
+a full-blown desktop as well. In this case it’s an XFCE 4 desktop on
+Xubuntu. And what we’ll do here just to demonstrate that yes, this
+thing **is** a fully interactive platform is open LibreOffice Writer
+and create some text in it.
+
+
+<!-- .slide: data-background-video="https://youtu.be/B1ic5o9geqw" -->
+
+<!-- Note -->
 Now, today we're not going to talk about all the fun little details of
 how the interaction with this cloud platform works, or how the lab
 stacks spin up, or how they automatically go to sleep when you don't
