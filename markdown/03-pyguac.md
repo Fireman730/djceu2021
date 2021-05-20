@@ -1,7 +1,12 @@
+# PyGuacamole
+
+<!-- Note -->
 So! Enter a pure-Python Guacamole client: `PyGuacamole`!
 
-https://github.com/mohabusama/pyguacamole
 
+<!-- .slide: data-background-image="images/github-pyguacamole.png" data-background-size="contain" -->
+
+<!-- Note -->
 What’s PyGuacamole?
 
 Well, as you heard just a moment ago, we need a client that can talk
@@ -24,7 +29,10 @@ that supports multiple protocols. The basic unit of `Channels` code
 is a `Consumer` and that's what we need create for our application,
 a Consumer.
 
-(start of code walkthrough)
+
+<!-- .slide: data-background-video="videos/djcon_code_screen_1.mp4" data-background-size="contain" -->
+
+<!-- Note -->
 Alright, so let's look at the code!
 
 `hastexo.py`:
@@ -40,6 +48,10 @@ The Javascript part actually stays the same, it works exactly as
 it would with the Java servlet. So I won't stop here any more than
 to just to show you how we initialise the Javascript client.
 
+
+<!-- .slide: data-background-video="videos/djcon_code_screen_2.mp4" data-background-size="contain"-->
+
+<!-- Note -->
 `consumer.py`:
 Now, let's move on to the most important part, the `consumer.py` file. 
 Since we are using websockets here and this communication runs in an
@@ -73,6 +85,10 @@ Let's go over the parameters for this:
 There are more options for customization which are all defined and
 explained in the `Guacamole` documentation.
 
+
+<!-- .slide: data-background-video="videos/djcon_code_screen_3.mp4" data-background-size="contain" -->
+
+<!-- Note -->
 Right, so now when we are connected to the client, we are going to create
 a _task_, _open_ the communication and _accept_ the connection.
 
@@ -96,17 +112,27 @@ client connection when the websocket gets disconnected.
 
 And that's all we need for the consumer, less than a 100 lines of code!
 
+
+<!-- .slide: data-background-image="images/djcon_code_screen_4.png" data-background-size="contain" -->
+
+<!-- Note -->
 `routing.py`:
 What we also need to do, is define the `application` in `routing.py`
 and point the websocket to our `GuacamoleWebSocketConsumer`.
 
+
+<!-- .slide: data-background-image="images/djcon_code_screen_5.png" data-background-size="contain" -->
+
+<!-- Note -->
 `settings.py`:
 In `settings.py`, amongst other things, we point to our ASGI application:
 `hastexo_guacamole_client.routing.application`. And note that 'channels'
 needs to be added to `INSTALLED_APPS`.
 
-(end of code walkthrough)
 
+<!-- .slide: data-background-image="images/django-docs-daphne.png" data-background-size="contain" -->
+
+<!-- Note -->
 OK, so now we have gone through the code but how do we run it?
 
 Well, there is an official ASGI HTTP/Websocket server, called `Daphne`,
@@ -116,6 +142,10 @@ we are using `Daphne`.
 But, in order to scale the number of processes, we are running it
 with `supervisord`.
 
+
+<!-- .slide: data-background-video="videos/djcon_docs_screen.mp4" data-background-size="contain" -->
+
+<!-- Note -->
 There is a great example for this in the `Channels` documentation, that
 I want to show you here.
 
