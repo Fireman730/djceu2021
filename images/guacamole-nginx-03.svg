@@ -91,10 +91,6 @@
       <tspan x="860" y="600">HTTP/Websockets</tspan>
     </text>
     <g>
-      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="790" y1="614.537" x2="790" y2="579.707"/>
-      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="785,606.773 790,616.773 795,606.773 "/>
-    </g>
-    <g>
       <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="680" y="540.731" width="220" height="38" rx="0" ry="0"/>
       <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Cantarell;font-style:normal;font-weight:normal" x="790" y="564.313">
         <tspan x="790" y="564.313">nginx </tspan>
