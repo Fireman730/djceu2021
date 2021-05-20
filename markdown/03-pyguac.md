@@ -22,6 +22,10 @@ and we want to be able to interact with it, right? We need to connect
 to this client in a way that allows bidirectional communication and
 for that we'll be using websockets.
 
+
+<!-- .slide: data-background-iframe="https://channels.readthedocs.io/en/stable/" data-background-size="contain" -->
+
+<!-- Note -->
 And so, as all of you probably know, to handle other protocols aside
 from HTTP in a Django project, we'll need to use `Channels`. 
 `Channels` is built on `ASGI`, Asynchronous Server Gateway Interface,

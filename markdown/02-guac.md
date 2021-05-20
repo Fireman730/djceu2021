@@ -1,4 +1,5 @@
-# Apache Guacamole
+<!-- .slide: data-background-image="https://svn.apache.org/repos/asf/comdev/project-logos/originals/guacamole.svg" data-background-size="contain" -->
+# Apache Guacamole <!-- .element class="hidden" -->
 
 <!-- Note -->
 So the technology that this all revolves around is Apache
@@ -13,8 +14,8 @@ So from here on out we're assuming two things.
 <!-- Note -->
 1. You're a learner on our platform, and you've opened a page in a
    course that contains a lab. That lab has successfully spun up a
-   random box somewhere in the cloud. So, "there is something for us
-   to work with".
+   random box somewhere in the cloud (like you just saw). So, "there
+   is something for us to work with".
 
 
 <!-- .slide: data-background-image="images/guacamole-overview-02.svg" data-background-size="contain" -->
@@ -23,9 +24,13 @@ So from here on out we're assuming two things.
 2. We’re able to connect to an IP address (IPv4 or IPv6, doesn't
    matter) that's been exposed on that box, and to two TCP ports: one
    for secure shell (usually port 22), and one for RDP (usually port
-   3389). (We could also be using VNC, but the same principle
-   applies. So we'll just stick with SSH and RDP for now, to keep it
-   simple.)
+   3389).
+   
+   We could also be using VNC, but the same principle applies. So
+   we'll just stick with SSH and RDP for now, to keep it simple. And
+   also because RDP is a protocol that works for both Windows and
+   Linux targets -- one natively, the other one via Xrdp or
+   gnome-remote-desktop.
 
 
 <!-- .slide: data-background-image="images/guacamole-overview-03.svg" data-background-size="contain" -->
@@ -79,7 +84,8 @@ it gets from the websocket stream.
 <!-- .slide: data-background-image="images/guacamole-overview.svg" data-background-size="contain" -->
 
 <!-- Note -->
-So keep this picture in mind; we'll come back to it at the end.
+So this is the general architecture we're talking about. Keep this
+picture in mind; we'll come back to it a few more times in the talk.
 
 
 <!-- .slide: data-background-iframe="https://player.vimeo.com/video/116207678" -->
@@ -108,6 +114,10 @@ understand.
 <!-- Note -->
 So the general architecture looks like this.
 
+
+<!-- .slide: data-background-iframe="https://guacamole.apache.org/doc/gug/writing-you-own-guacamole-app.html" -->
+
+<!-- Note -->
 Now if you don't need the standard Guacamole remote-desktop manager,
 and you want to incorporate Guacamole into your own application, the
 developers give you a nice how-to for [how to build your
@@ -115,7 +125,7 @@ own](https://guacamole.apache.org/doc/1.3.0/gug/writing-you-own-guacamole-app.ht
 -- again, using a Java servlet stack.
 
 
-<!-- .slide: data-background-iframe="https://guacamole.apache.org/doc/gug/writing-you-own-guacamole-app.html" -->
+<!-- .slide: data-background-image="images/guacamole-overview-java-tomcat.svg" data-background-size="contain" -->
 
 <!-- Note -->
 OK, but now **what if** you don't want to take the Java detour? For
@@ -124,11 +134,14 @@ can nicely access in the Django ORM, that you somehow want to make
 accessible to Guacamole.
 
 As a simple example: you may be generating one-time SSH keys for
-connecting to your labs. So, you now want to store that data in Django
-somewhere, like, say two FileFields pointing to the private and public
-key files. When you tear the lab down you'll throw them both away, but
-while the lab is alive you want to grab that data from your database
-and create a Guacamole connection.
+connecting to your labs. SSH keys that you create when you spin up a
+new lab and that you delete when you throw the lab away, so every key
+is always for one lab only and you never reuse those keys. So, you now
+want to store that data in Django somewhere, like, say two FileFields
+pointing to the private and public key files. When you tear the lab
+down you'll throw them both away, but while the lab is alive you want
+to grab that data from your database and create a Guacamole
+connection.
 
 Now, you *could* do some really bad data mangling and then copy all
 that data from your Django model into a database that the Java
@@ -140,7 +153,14 @@ really don't want to do that.
 
 <!-- Note -->
 So, what if instead you did this, and bypassed the Java servlet bits
-altogether? What if you could write a full blown Guacamole client, in
+altogether? 
+
+Maybe you don't want to add a Java runtime environment and servlet
+container to your deployment chain? Maybe you're a pure-Python shop
+and simply don't have Java development capacity on your team? Maybe
+you just really, really like using Django?
+
+What if you could write a full blown Guacamole client, in
 Python, using Django, that has access to everything that's in your
 data model and that you can just plug into your Django deployment
 pipeline? Well it turns out that you can do exactly that.
