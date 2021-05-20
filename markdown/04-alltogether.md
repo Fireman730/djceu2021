@@ -15,6 +15,10 @@ and several others. So, to unify things like SSL certificate
 management and even having one IP address for all services, we just
 throw everything behind nginx.
 
+
+<!-- .slide: data-background-video="videos/rdp-event.mp4" data-background-size="contain" -->
+
+<!-- Note -->
 So to sum it all up, let's follow the track of how an RDP or SSH
 session ends up in an interactive browser window, one more time:
 
@@ -60,18 +64,51 @@ session ends up in an interactive browser window, one more time:
   socket stream and displays it in your browser window.
 
 
+<!-- .slide: data-background-video="videos/rdp-click.mp4" data-background-size="contain" -->
+
 <!-- Note -->
 Now you hit a key or click in the window on your browser.
 
+
+<!-- .slide: data-background-image="images/guacamole-nginx-06.svg" data-background-size="contain" -->
+
+<!-- Note -->
 * A JavaScript event listener notices the key strike or pointer click.
 * It sends a Websocket request up to nginx.
+
+
+<!-- .slide: data-background-image="images/guacamole-nginx-07.svg" data-background-size="contain" -->
+
+<!-- Note -->
 * nginx proxies that event to the ASGI listener exposed by Daphne.
 * The listener takes the web socket event and translates it into a
   Guacamole protocol event.
+
+
+<!-- .slide: data-background-image="images/guacamole-nginx-08.svg" data-background-size="contain" -->
+
+<!-- Note -->
 * PyGuacamole passes the event on to guacd.
+
+
+<!-- .slide: data-background-image="images/guacamole-nginx-09.svg" data-background-size="contain" -->
+
+<!-- Note -->
 * guacd translates it into an RDP event.
 * guacd's RDP client library (linked to freerdp2) sends the RDP event
   on to the upstream server.
 
+
+<!-- .slide: data-background-image="images/guacamole-nginx-01.svg" data-background-size="contain" -->
+
+<!-- Note -->
+The server processes the event, sends an update back down the wire,...
+
+
+<!-- .slide: data-background-image="images/guacamole-nginx-02.svg" data-background-size="contain" -->
+
+<!-- Note -->
+and da capo, da capo, ad infinitum.
+
 And that's how you put a desktop -- or a terminal session -- in any
-browser!
+browser, with Django!
