@@ -51,7 +51,7 @@ interactive and you can use it just like your favourite terminal
 emulator.
 
 
-<!-- .slide: data-background-iframe="https://www.youtube-nocookie.com/embed/B1ic5o9geqw?start=222" data-background-size="contain" -->
+<!-- .slide: data-background-video="videos/screencast-desktop.mp4" data-background-color="black" data-background-size="contain" -->
 
 <!-- Note -->
 And -- as you can see in the next lab that we’re progressing to here
@@ -62,7 +62,7 @@ thing **is** a fully interactive platform is open LibreOffice Writer
 and create some text in it.
 
 
-<!-- .slide: data-background-video="https://youtu.be/B1ic5o9geqw" -->
+<!-- .slide: data-background-iframe="https://www.youtube.com/embed/B1ic5o9geqw?start=222" data-background-size="contain" -->
 
 <!-- Note -->
 Now, today we're not going to talk about all the fun little details of
