@@ -3,9 +3,15 @@ Putting a shell (or a desktop) in your Django app
 
 * * *
 
-Maari Tamm, Florian Haas | [@tammmri](https://twitter.com/tammmri), [@xahteiwi](https://twitter.com/xahteiwi)
+Maari Tamm [@tammmri](https://twitter.com/tammmri)  
+Florian Haas [@xahteiwi](https://twitter.com/xahteiwi)
 
-DjangoCon Europe 2021 | 2021-06-04
+* * *
+
+DjangoCon Europe 2021  
+2021-06-04
 
 <!-- Note -->
-This is our presentation from DjangoCon Europe 2021, on using Guacamole to embed a terminal or desktop console into any Django application.
+Hi! I’m Maari, and I’m Florian, and were here to talk to you about how
+to get interactive: putting a shell — or a desktop! — right into your
+Django app.
