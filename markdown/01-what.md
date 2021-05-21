@@ -16,7 +16,7 @@ only reason why this is the _only_ Open edX talk in the conference is
 that Open edX had its _own_ annual conference just last week.
 
 
-<!-- .slide: data-background-image="images/cca-start-page.png" data-background-size="contain" -->
+https://academy.citycloud.com
 
 <!-- Note -->
 So we run this learning platform to teach people complex technology
