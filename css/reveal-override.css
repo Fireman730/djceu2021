@@ -12,6 +12,10 @@ body:after {
   right: 2em;
 }
 
+.reveal {
+  font-family: "Cantarell", sans-serif !important;
+}
+
 .reveal .hidden {
   display: none;
 }
