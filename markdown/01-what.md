@@ -28,7 +28,7 @@ we're about to show you, as you'll see in a moment. So this totally
 applies to you even if you're _not_ working in a cloud company.
 
 
-<!-- .slide: data-background-video="videos/screencast-terminal.mp4" data-background-color="black" data-background-size="contain" -->
+<!-- .slide: data-background-video="videos/screencast-terminal.mp4" data-background-size="contain" -->
 
 <!-- Note -->
 So. What's happening here is that we open up a page on the learning
@@ -51,7 +51,7 @@ interactive and you can use it just like your favourite terminal
 emulator.
 
 
-<!-- .slide: data-background-video="videos/screencast-desktop.mp4" data-background-color="black" data-background-size="contain" -->
+<!-- .slide: data-background-video="videos/screencast-desktop.mp4" data-background-size="contain" -->
 
 <!-- Note -->
 And -- as you can see in the next lab that we’re progressing to here
