@@ -11,6 +11,10 @@ Reveal.initialize({
 
     transition: 'none',
 
+    // Advance to the next slide when pressing the return (enter) key
+    keyboard: {
+	13: 'next'
+    },
 
     menu: {
         themes: true,
