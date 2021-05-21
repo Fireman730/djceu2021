@@ -61,10 +61,6 @@ Xubuntu. And what we’ll do here just to demonstrate that yes, this
 thing **is** a fully interactive platform is open LibreOffice Writer
 and create some text in it.
 
-
-<!-- .slide: data-background-iframe="https://www.youtube.com/embed/B1ic5o9geqw?start=222" data-background-size="contain" -->
-
-<!-- Note -->
 Now, today we're not going to talk about all the fun little details of
 how the interaction with this cloud platform works, or how the lab
 stacks spin up, or how they automatically go to sleep when you don't
