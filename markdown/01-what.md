@@ -3,12 +3,22 @@
 <!-- Note -->
 So what are we talking about here? Let us just show you. What you see
 on your screen right now is a platform that we run, City Cloud
-Academy. It is a learning management system that's based on Open edX,
+Academy.
+
+
+![Open edX logo](https://files.edx.org/openedx-logos/open-edx-logo-tag.png)
+
+<!-- Note -->
+It is a learning management system that's based on Open edX,
 which _itself_ is a big set of Django applications that could be a
 DjangoCon talk -- or tutorial! on its own. And in fact, probably the
 only reason why this is the _only_ Open edX talk in the conference is
 that Open edX had its _own_ annual conference just last week.
 
+
+<!-- .slide: data-background-image="images/cca-start-page.png" data-background-size="contain" -->
+
+<!-- Note -->
 So we run this learning platform to teach people complex technology
 -- like Ceph, Kubernetes, OpenStack, Terraform, that sort of
 thing. And we hope that you agree with us that most people learn best
