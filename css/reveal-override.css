@@ -29,7 +29,7 @@ body:after {
 }
 
 .reveal iframe, .reveal img {
-  border: none;
+  border: none !important;
 }
 
 .reveal .fragment .visible {
