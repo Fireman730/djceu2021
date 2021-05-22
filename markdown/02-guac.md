@@ -138,7 +138,16 @@ connecting to your labs. SSH keys that you create when you spin up a
 new lab and that you delete when you throw the lab away, so every key
 is always for one lab only and you never reuse those keys. So, you now
 want to store that data in Django somewhere, like, say two FileFields
-pointing to the private and public key files. When you tear the lab
+pointing to the private and public key files. 
+
+
+Just don’t throw SSH keys into `MEDIA_ROOT` or `DEFAULT_FILE_STORAGE`,
+please.
+
+That would be a bad idea. 🙂
+
+<!-- Note -->
+When you tear the lab
 down you'll throw them both away, but while the lab is alive you want
 to grab that data from your database and create a Guacamole
 connection.

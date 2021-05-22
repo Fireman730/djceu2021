@@ -3,12 +3,22 @@
 <!-- Note -->
 So what are we talking about here? Let us just show you. What you see
 on your screen right now is a platform that we run, City Cloud
-Academy. It is a learning management system that's based on Open edX,
+Academy.
+
+
+![Open edX logo](https://files.edx.org/openedx-logos/open-edx-logo-tag.png)
+
+<!-- Note -->
+It is a learning management system that's based on Open edX,
 which _itself_ is a big set of Django applications that could be a
 DjangoCon talk -- or tutorial! on its own. And in fact, probably the
 only reason why this is the _only_ Open edX talk in the conference is
 that Open edX had its _own_ annual conference just last week.
 
+
+https://academy.citycloud.com
+
+<!-- Note -->
 So we run this learning platform to teach people complex technology
 -- like Ceph, Kubernetes, OpenStack, Terraform, that sort of
 thing. And we hope that you agree with us that most people learn best
@@ -28,7 +38,7 @@ we're about to show you, as you'll see in a moment. So this totally
 applies to you even if you're _not_ working in a cloud company.
 
 
-<!-- .slide: data-background-video="videos/screencast-terminal.mp4" data-background-color="black" data-background-size="contain" -->
+<!-- .slide: data-background-video="videos/screencast-terminal.mp4" data-background-size="contain" -->
 
 <!-- Note -->
 So. What's happening here is that we open up a page on the learning
@@ -51,7 +61,7 @@ interactive and you can use it just like your favourite terminal
 emulator.
 
 
-<!-- .slide: data-background-video="videos/screencast-desktop.mp4" data-background-color="black" data-background-size="contain" -->
+<!-- .slide: data-background-video="videos/screencast-desktop.mp4" data-background-size="contain" -->
 
 <!-- Note -->
 And -- as you can see in the next lab that we’re progressing to here
@@ -61,10 +71,6 @@ Xubuntu. And what we’ll do here just to demonstrate that yes, this
 thing **is** a fully interactive platform is open LibreOffice Writer
 and create some text in it.
 
-
-<!-- .slide: data-background-iframe="https://www.youtube.com/embed/B1ic5o9geqw?start=222" data-background-size="contain" -->
-
-<!-- Note -->
 Now, today we're not going to talk about all the fun little details of
 how the interaction with this cloud platform works, or how the lab
 stacks spin up, or how they automatically go to sleep when you don't

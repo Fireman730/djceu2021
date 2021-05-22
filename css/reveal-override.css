@@ -5,11 +5,15 @@
 body:after {
   content: '@tammmri @xahteiwi';
   opacity: 0.5;
-  font-size: 150%;
+  font-size: 100%;
   font-family: "Cantarell", sans-serif;
   position: fixed;
-  bottom: 2em;
-  right: 2em;
+  bottom: 1em;
+  right: 1em;
+}
+
+.reveal {
+  font-family: "Cantarell", sans-serif !important;
 }
 
 .reveal .hidden {
@@ -25,7 +29,7 @@ body:after {
 }
 
 .reveal iframe, .reveal img {
-  border: none;
+  border: none !important;
 }
 
 .reveal .fragment .visible {
